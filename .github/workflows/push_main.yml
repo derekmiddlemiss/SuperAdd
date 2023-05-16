@@ -1,8 +1,9 @@
-name: Create PR, code quality checks
+name: Semantic release
+
 on:
   push:
     branches:
-      - '!main'
+      - main
 
 jobs:
   quality:
@@ -33,15 +34,18 @@ jobs:
       - name: Linting
         run: poetry run flake8 --exclude .git,__pycache__,build,dist,.venv
 
-  create_pr:
-    runs-on: ubuntu-latest
+  release:
     needs: quality
+    runs-on: ubuntu-latest
+    concurrency: release
+
     steps:
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+      - name: Fetch repo
+        uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: Auto Pull Request
-          title: Auto pull request
-          branch: ${{ github.ref }}
-          base: main
+          fetch-depth: 0
+
+      - name: Python Semantic Release
+        uses: relekang/python-semantic-release@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
