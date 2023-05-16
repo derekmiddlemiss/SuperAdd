@@ -28,7 +28,7 @@ jobs:
         run: poetry run pytest
 
       - name: Linting
-        run: poetry run flake8
+        run: poetry run flake8 --exclude .git,__pycache__,build,dist,.venv
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
