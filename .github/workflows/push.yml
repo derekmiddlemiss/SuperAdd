@@ -1,8 +1,8 @@
 name: Create PR, code quality checks
 on:
   push:
-    branches:
-      - '!main'
+    branches-ignore:
+      - main
 
 jobs:
   quality:
