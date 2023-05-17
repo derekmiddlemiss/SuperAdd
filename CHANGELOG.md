@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.1 (2023-05-17)
+### Fix
+* Main push ([`ad71cd4`](https://github.com/derekmiddlemiss/SuperAdd/commit/ad71cd422750854f06767b0d62e37ccadb339a4f))
+
 ## v0.1.0 (2023-05-17)
 ### Feature
 * Further yaml fixes ([`39d0e6b`](https://github.com/derekmiddlemiss/SuperAdd/commit/39d0e6b5bab4773a1342c56131cd76a1546152d1))
