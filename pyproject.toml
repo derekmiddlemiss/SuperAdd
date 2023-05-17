@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "superadd"
-version = "0.1.1"
+name = "super_add"
+version = "0.0.0"
 description = ""
 authors = ["Del Middlemiss <derekmiddlemiss@gmail.com>"]
 readme = "README.md"
@@ -14,7 +14,7 @@ version_variable = [
 branch = 'main'
 upload_to_pypy = false
 upload_to_release = true
-build_command = 'pip install poetry && poetry build'
+build_command = 'poetry build'
 
 [tool.black]
 line-length = 79
