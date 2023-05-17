@@ -18,12 +18,6 @@ jobs:
         shell: bash
         run: poetry config virtualenvs.in-project true
 
-      - name: Setup python v11
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-          cache: "poetry"
-
       - name: Install dependencies
         run: poetry install
 
