@@ -7,3 +7,7 @@ def test_add_simple():
 
 def test_add_negs():
     assert add(-1, -2) == -3
+
+
+def test_add_pos_neg():
+    assert add(1, -5) == -4
